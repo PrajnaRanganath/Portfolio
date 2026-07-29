@@ -1,0 +1,225 @@
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#FFFDF1;
+
+    overflow:hidden;
+
+}
+
+.heroContent{
+
+    position:absolute;
+
+    left:73px;
+    top:250px;
+
+    width:min(1205px, calc(100% - 146px));
+
+}
+
+.heroTitle{
+
+    font-family:var(--font-manrope);
+
+    font-weight:800;
+
+    font-size:100px;
+
+    line-height:1.1;
+
+    letter-spacing:1%;
+
+    color:#22223B;
+
+}
+
+.heroLine{
+
+    width:100%;
+
+    height:5px;
+
+    background:#FFD700;
+
+    margin-top:20px;
+
+}
+
+.heroSubtitle{
+
+    margin-top:20px;
+
+    width:100%;
+
+    font-family:var(--font-manrope);
+
+    font-weight:600;
+
+    font-size:22px;
+
+    line-height:1.5;
+
+    letter-spacing:1%;
+
+    color:#5A5A5A;
+
+}
+
+.downloadCV{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    text-decoration:none;
+
+    font-family:var(--font-manrope);
+
+    font-weight:600;
+
+    font-size:22px;
+
+    letter-spacing:1%;
+
+    color:#FFD700;
+
+    transition:.25s;
+
+}
+
+.downloadCV:hover{
+
+    color:#22223B;
+
+}
+
+/* =======================================
+              1600px
+======================================= */
+
+@media (max-width:1600px){
+
+.heroContent{
+
+    width:min(1100px, calc(100% - 146px));
+
+}
+
+}
+
+/* =======================================
+              1440px
+======================================= */
+
+@media (max-width:1440px){
+
+.heroTitle{
+
+    font-size:90px;
+
+}
+
+.heroSubtitle{
+
+    font-size:20px;
+
+}
+
+.downloadCV{
+
+    font-size:20px;
+
+}
+
+}
+
+/* =======================================
+              1200px
+======================================= */
+
+@media (max-width:1200px){
+
+.heroContent{
+
+    left:55px;
+
+    width:calc(100% - 110px);
+
+}
+
+.heroTitle{
+
+    font-size:72px;
+
+}
+
+.heroSubtitle{
+
+    font-size:18px;
+
+}
+
+.downloadCV{
+
+    font-size:18px;
+
+}
+
+}
+
+/* =======================================
+              Tablet
+======================================= */
+
+@media (max-width:768px){
+
+.hero{
+
+    display:flex;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+    .heroContent{
+
+    position:static;
+
+    width:calc(100% - 64px);
+
+    margin:0 auto;
+
+    padding-top:140px;
+
+}
+
+.heroTitle{
+
+    font-size:54px;
+
+}
+
+.heroSubtitle{
+
+    font-size:16px;
+    margin-top:16px;
+
+
+}
+
+.downloadCV{
+
+    font-size:16px;
+    margin-top:24px;
+
+}
+
+}

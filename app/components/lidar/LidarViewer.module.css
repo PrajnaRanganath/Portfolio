@@ -1,0 +1,776 @@
+.viewer {
+
+    --gold: #FFD700;
+    --gold-soft: #FFE680;
+    --navy: #22223B;
+    --cream: #FFFDF1;
+    --muted: #b3b3b3;
+    --light: #a9a9a9;
+
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+                         HEADER
+===================================================== */
+
+.header {
+
+    width: 100%;
+    max-width: 100%;
+
+    text-align: center;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+}
+
+
+.eyebrow {
+
+    margin-bottom: 6px;
+
+    font-family: var(--font-manrope);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+    color: var(--gold);
+}
+
+
+.header h3 {
+
+    margin: 0;
+
+    font-family: var(--font-manrope);
+
+    font-size: 24px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    color: var(--cream);
+}
+
+
+.header p {
+
+    max-width: 700px;
+
+    margin: 8px auto 0;
+
+    font-family: var(--font-manrope);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: var(--cream);
+}
+
+
+/* =====================================================
+                         TOOLBAR
+===================================================== */
+
+/*
+    Layout:
+
+    [RAW] → [NOISE] → [GROUND]
+    [VOXEL] → [CLUSTER] → [BOXES]
+
+    Each .stage contains BOTH the button
+    and its arrow.
+
+    Therefore:
+    - no absolute positioning
+    - no overlapping
+    - no floating arrows
+    - BOXES has no arrow
+*/
+
+/* =====================================================
+                         ROW 1
+===================================================== */
+
+.toolbarRow {
+
+    width: 100%;
+    max-width: 360px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    /* Closer overall spacing */
+    gap: 5px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+                         ROW 2
+===================================================== */
+
+.toolbarRowSecond {
+
+    width: 100%;
+    max-width: 360px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    /* Closer overall spacing */
+    gap: 5px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+                         BUTTONS
+===================================================== */
+
+.button,
+.active {
+
+    flex: 1 1 0;
+
+    width: 0;
+
+    min-width: 80px;
+    margin-bottom: 4px;
+
+    height: 34px;
+
+    padding:
+        0
+        6px;
+
+    border-radius: 999px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    font-family:
+        var(--font-manrope);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.button {
+
+    border:
+        3px solid
+        var(--gold);
+
+    background:
+        transparent;
+
+    color:
+        var(--cream);
+}
+
+
+.button:hover {
+
+    background:
+        rgba(
+            255,
+            215,
+            0,
+            .13
+        );
+
+    transform:
+        translateY(-1px);
+}
+
+
+.active {
+
+    border:
+        3px solid
+        var(--gold);
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+}
+
+
+.active:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 4px 14px
+        rgba(
+            255,
+            215,
+            0,
+            .22
+        );
+}
+
+
+/* =====================================================
+                         ARROWS
+===================================================== */
+
+.arrow {
+
+    flex:
+        0
+        0
+        auto;
+
+    width: 18px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: top;
+
+    justify-content: center;
+
+    color:
+        var(--gold);
+
+    font-family:
+        var(--font-manrope);
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+                    VISUALIZATION
+===================================================== */
+
+.visualArea {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    border:
+        2px solid
+        rgba(
+            255,
+            215,
+            0,
+            .35
+        );
+
+    border-radius: 0px;
+
+    background:
+        var(--navy);
+
+    box-sizing: border-box;
+}
+
+
+.canvas {
+
+    display: block;
+
+    width: 100%;
+
+    height: 520px;
+
+    background:
+        var(--navy);
+}
+
+
+/* =====================================================
+                      SENSOR INFO
+===================================================== */
+
+.range {
+
+    position: absolute;
+
+    top: 16px;
+
+    left: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    pointer-events: none;
+
+    font-family:
+        var(--font-manrope);
+}
+
+
+.range span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--muted);
+}
+
+
+.range strong {
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    color:
+        var(--gold);
+}
+
+
+/* =====================================================
+                         STATS
+===================================================== */
+
+.stats {
+
+    position: absolute;
+
+    right: 18px;
+
+    bottom: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    pointer-events: none;
+
+    font-family:
+        var(--font-manrope);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+    color:
+        var(--muted);
+}
+
+
+/* =====================================================
+                         LEGEND
+===================================================== */
+
+.legend {
+
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding:
+        0
+        4px;
+
+    box-sizing: border-box;
+}
+
+
+.legendLine {
+
+    flex-shrink: 0;
+
+    width: 4px;
+
+    min-height: 28px;
+
+    background:
+        var(--gold);
+
+    border-radius: 2px;
+}
+
+
+.legend p {
+
+    margin: 0;
+
+    font-family:
+        var(--font-manrope);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color:
+        var(--cream);
+}
+
+
+/* =====================================================
+                         LOADING
+===================================================== */
+
+.loading {
+
+    min-height: 520px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family:
+        var(--font-manrope);
+
+    font-size: 14px;
+
+    color:
+        var(--cream);
+}
+
+
+/* =====================================================
+                         LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .toolbar {
+
+        gap:
+            10px
+            7px;
+    }
+
+
+    .stage {
+
+        gap: 4px;
+    }
+
+
+    .button,
+    .active {
+
+        font-size: 10px;
+
+        padding:
+            7px
+            4px;
+    }
+
+
+    .arrow {
+
+        width: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .header p {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+                         TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .viewer {
+
+        gap: 14px;
+    }
+
+
+    .toolbar {
+
+        gap:
+            9px
+            5px;
+    }
+
+
+    .stage {
+
+        gap: 3px;
+    }
+
+
+    .button,
+    .active {
+
+        font-size: 9px;
+
+        padding:
+            7px
+            3px;
+
+        border-width: 2px;
+    }
+
+
+    .arrow {
+
+        width: 9px;
+
+        font-size: 12px;
+    }
+
+
+    .header h3 {
+
+        font-size: 21px;
+    }
+
+
+    .header p {
+
+        font-size: 14px;
+    }
+
+
+    .canvas {
+
+        height: 460px;
+    }
+
+
+    .legend p {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+                         MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .viewer {
+
+        gap: 12px;
+    }
+
+
+    .header {
+
+        padding:
+            0
+            4px;
+    }
+
+
+    .header h3 {
+
+        font-size: 19px;
+    }
+
+
+    .header p {
+
+        font-size: 13px;
+    }
+
+
+    /* ================================================
+       TWO-COLUMN GRID
+    ================================================ */
+
+    .toolbar {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+
+        gap:
+            8px;
+    }
+
+
+    /*
+        Mobile buttons have no arrows.
+
+        This avoids awkward:
+        → ↓
+        arrow layouts.
+    */
+
+    .stage {
+
+        width: 100%;
+
+        gap: 0;
+    }
+
+
+    .button,
+    .active {
+
+        width: 100%;
+
+        font-size: 11px;
+
+        padding:
+            8px
+            5px;
+
+        border-width: 3px;
+    }
+
+
+    .arrow {
+
+        display: none;
+    }
+
+
+    /* ================================================
+                    VISUALIZATION
+    ================================================ */
+
+    .visualArea {
+
+        border-radius: 10px;
+    }
+
+
+    .canvas {
+
+        height: 380px;
+    }
+
+
+    /* ================================================
+                    SENSOR INFO
+    ================================================ */
+
+    .range {
+
+        top: 10px;
+
+        left: 10px;
+    }
+
+
+    .stats {
+
+        right: 10px;
+
+        bottom: 10px;
+
+        font-size: 8px;
+    }
+
+
+    /* ================================================
+                       LEGEND
+    ================================================ */
+
+    .legend {
+
+        padding:
+            0
+            2px;
+    }
+
+
+    .legend p {
+
+        font-size: 13px;
+    }
+
+}

@@ -1,0 +1,472 @@
+.sandbox{
+
+    --cell-size:22px;
+
+    width:100%;
+
+    max-width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin:0 auto;
+
+    overflow:hidden;
+
+}
+
+/* ================= HEADER ================= */
+
+.header{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:0 12px;
+
+}
+
+.header p{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    color:#FFFDF1;
+
+}
+
+/* ================= GRID ================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(16,var(--cell-size));
+
+    grid-template-rows:repeat(16,var(--cell-size));
+
+    gap:2px;
+
+    justify-content:center;
+
+    width:100%;
+
+    overflow-x:auto;
+
+    padding-bottom:2px;
+
+    user-select:none;
+
+}
+
+.cell{
+
+    width:var(--cell-size);
+
+    height:var(--cell-size);
+
+    background:#FFFDF1;
+
+    border-radius:2px;
+
+    cursor:crosshair;
+
+    transition:.18s ease;
+
+    flex-shrink:0;
+
+}
+
+.cell:not(.wall):not(.start):not(.goal):hover{
+
+    background:#D8D8D8;
+
+}
+
+/* ================= TOOLBAR ================= */
+
+.toolbar{
+
+    width:100%;
+
+    max-width:560px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:0 auto;
+
+}
+
+.button{
+
+    flex:1 1 110px;
+
+    min-width:95px;
+
+    max-width:135px;
+
+    padding:8px 14px;
+
+    border:4px solid #FFD700;
+
+    background:transparent;
+
+    color:#FFFDF1;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-family:var(--font-manrope);
+
+    font-size:14px;
+
+    transition:.2s;
+
+}
+
+.button:hover{
+
+    background:#FFD70022;
+
+}
+
+.activeButton{
+
+    flex:1 1 110px;
+
+    min-width:95px;
+
+    max-width:135px;
+
+    padding:8px 14px;
+
+    border:none;
+
+    background:#FFD700;
+
+    color:#22223B;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-family:var(--font-manrope);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/* ================= CELL TYPES ================= */
+
+.wall{
+
+    background:#22223B;
+
+}
+
+.start{
+
+    background:#FFD700;
+
+    animation:startPulse 1.2s infinite;
+
+}
+
+.goal{
+
+    background:#FFE680;
+
+    animation:goalPulse 1.2s infinite;
+
+}
+
+.visited{
+
+    background:#8F97A8;
+
+    animation:visitedFade .25s ease;
+
+}
+
+.path{
+
+    background:#FFD700;
+
+    animation:pathGlow .35s ease;
+
+}
+
+/* ================= STATUS ================= */
+
+.status{
+
+    min-height:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#FFFDF1;
+
+    text-align:center;
+
+}
+/* ================= ANIMATIONS ================= */
+
+@keyframes startPulse{
+
+    0%{
+        transform:scale(.95);
+        box-shadow:0 0 0 rgba(255,215,0,.7);
+    }
+
+    50%{
+        transform:scale(1);
+        box-shadow:0 0 12px rgba(255,215,0,.9);
+    }
+
+    100%{
+        transform:scale(.95);
+        box-shadow:0 0 0 rgba(255,215,0,.7);
+    }
+
+}
+
+@keyframes goalPulse{
+
+    0%{
+        transform:scale(.95);
+        box-shadow:0 0 0 rgba(255,230,128,.7);
+    }
+
+    50%{
+        transform:scale(1);
+        box-shadow:0 0 12px rgba(255,230,128,.9);
+    }
+
+    100%{
+        transform:scale(.95);
+        box-shadow:0 0 0 rgba(255,230,128,.7);
+    }
+
+}
+
+@keyframes visitedFade{
+
+    from{
+        transform:scale(.7);
+        opacity:.3;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+@keyframes pathGlow{
+
+    0%{
+        transform:scale(.6);
+        box-shadow:0 0 0 rgba(255,215,0,0);
+    }
+
+    50%{
+        transform:scale(1.05);
+        box-shadow:0 0 10px rgba(255,215,0,.9);
+    }
+
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 4px rgba(255,215,0,.4);
+    }
+
+}
+
+/* ================= LAPTOP ================= */
+
+@media (max-width:1200px){
+
+.sandbox{
+
+    --cell-size:20px;
+
+}
+
+.toolbar{
+
+    max-width:500px;
+
+    gap:8px;
+
+}
+
+.button,
+.activeButton{
+
+    flex:1 1 100px;
+
+    min-width:90px;
+
+    max-width:125px;
+
+    font-size:13px;
+
+    padding:7px 12px;
+
+}
+
+.header p{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:900px){
+
+.sandbox{
+
+    --cell-size:18px;
+
+    gap:14px;
+
+}
+
+.grid{
+
+    gap:2px;
+
+}
+
+.toolbar{
+
+    max-width:420px;
+
+    gap:8px;
+
+}
+
+.button,
+.activeButton{
+
+    flex:1 1 90px;
+
+    min-width:88px;
+
+    max-width:110px;
+
+    padding:7px 10px;
+
+    font-size:12px;
+
+}
+
+.status{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:600px){
+
+.sandbox{
+
+    --cell-size:16px;
+
+    gap:12px;
+
+}
+
+.header{
+
+    padding:0 4px;
+
+}
+
+.header p{
+
+    font-size:13px;
+
+}
+
+.grid{
+
+    gap:1.5px;
+
+}
+
+.toolbar{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    width:100%;
+
+    max-width:280px;
+
+    gap:8px;
+
+}
+
+.button,
+.activeButton{
+
+    width:100%;
+
+    min-width:0;
+
+    max-width:none;
+
+    font-size:12px;
+
+    padding:8px;
+
+}
+
+.status{
+
+    font-size:13px;
+
+}
+
+}

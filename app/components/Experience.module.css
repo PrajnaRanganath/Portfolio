@@ -1,0 +1,676 @@
+.experience{
+
+    width:100%;
+    min-height:100vh;
+
+    background:#FFD700;
+
+    padding:140px 73px 80px;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* =======================================================
+                        HEADING
+======================================================= */
+
+.headingRow{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+.line{
+    flex:1;
+    height:5px;
+    background:#FFFDF1;
+    margin-left:18px;
+    margin-right:400px;
+}
+
+.number{
+
+    display:flex;
+
+    align-items:baseline;
+
+    margin-right:18px;
+
+}
+
+.zero{
+
+    font-family:var(--font-manrope);
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#22223B;
+
+}
+
+.five{
+
+    font-family:var(--font-manrope);
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#FFFDF1;
+
+}
+
+.heading{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-weight:800;
+
+    font-size:100px;
+
+    line-height:1;
+
+    letter-spacing:1%;
+
+    color:#22223B;
+
+}
+
+
+.description{
+
+    width:700px;
+
+    margin-top:20px;
+
+    margin-left:54px;
+
+    margin-bottom:45px;
+
+    font-family:var(--font-manrope);
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:1.35;
+
+    color:#22223B;
+
+}
+
+/* =======================================================
+                    PROJECT LIST
+======================================================= */
+
+/* =======================================================
+                    EXPERIENCE LIST
+======================================================= */
+
+.experienceList{
+    width:100%;
+}
+
+.experienceWrapper{
+    width:100%;
+}
+
+.experienceRow{
+
+    min-height:110px;
+
+    border-top:2px solid rgba(255,253,241,.6);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;   /* Changed from center */
+
+    padding:24px 28px 24px 40px;
+
+    gap:28px;
+}
+
+.experienceWrapper:last-child .experienceRow{
+    border-bottom:2px solid rgba(255,253,241,.6);
+}
+
+.experienceText{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+
+    min-width:0;
+}
+
+/* ---------------- TOP ROW ---------------- */
+
+.topRow{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:40px;
+
+    width:100%;
+}
+
+.experienceText h3{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#22223B;
+
+    line-height:1.2;
+}
+
+.duration{
+
+    flex-shrink:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#A88E01;
+
+    white-space:nowrap;
+
+    margin-top:6px;
+}
+
+/* ---------------- ORGANIZATION ---------------- */
+
+.experienceText h4{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#3C3C58;
+
+    line-height:1.5;
+}
+
+/* Hide subtitle on desktop.
+   We'll show it only inside the expanded card. */
+
+.experienceText p{
+    display:none;
+}
+
+/* =======================================================
+                    ARROW
+======================================================= */
+
+.arrowButton{
+
+    width:52px;
+    height:52px;
+
+    flex-shrink:0;
+
+    background:none;
+    border:none;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:0;
+
+    margin-top:-9px;   /* Fine-tune this value */
+}
+
+.arrow{
+
+    width:38px;
+
+    height:38px;
+
+    color:#22223B;
+
+    transition:.35s ease;
+}
+
+.arrowOpen{
+
+    transform:rotate(90deg);
+
+}
+
+/* =======================================================
+                    EXPAND PANEL
+======================================================= */
+
+.expand{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transition:
+        max-height .45s ease,
+        opacity .35s ease;
+}
+
+.expandOpen{
+
+    max-height:2000px;
+
+    opacity:1;
+}
+
+/* =======================================================
+                    EXPERIENCE PAGE
+======================================================= */
+
+.experiencePage{
+
+    background:#22223B;
+
+    padding:60px 70px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.experiencePage h2{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:56px;
+
+    font-weight:800;
+
+    color:#FFFDF1;
+}
+
+.experiencePage h3{
+
+    margin-top:14px;
+
+    font-family:var(--font-manrope);
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#FFD700;
+}
+
+.pageDuration{
+
+    margin-top:12px;
+
+    font-family:var(--font-manrope);
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#B3B3B3;
+}
+
+/* ---------------- DESCRIPTION ---------------- */
+
+.points{
+
+    margin-top:40px;
+
+    padding:0;
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+.points li{
+
+    position:relative;
+
+    padding-left:30px;
+
+    font-family:var(--font-manrope);
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#CFCFCF;
+}
+
+.points li::before{
+
+    content:"•";
+
+    position:absolute;
+
+    left:0;
+
+    top:0.72em;
+
+    transform:translateY(-50%);
+
+    color:#FFD700;
+
+    font-size:24px;
+
+    line-height:1;
+
+}
+.subtitle{
+    margin-top:10px;
+
+    font-family:var(--font-manrope);
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#A88E01;
+}
+
+/* ---------- Tablet ---------- */
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+/* ---------- 1440 ---------- */
+
+@media (max-width:1440px){
+
+.line{
+    margin-right:220px;
+}
+
+.description{
+    width:600px;
+}
+
+.experiencePage{
+    padding:55px 60px;
+}
+
+.experiencePage h2{
+    font-size:50px;
+}
+
+.experiencePage h3{
+    font-size:24px;
+}
+
+.points li{
+    font-size:18px;
+}
+
+}
+
+/* ---------- 1200 ---------- */
+
+@media (max-width:1200px){
+
+.experience{
+    padding:120px 55px 70px;
+}
+
+.heading{
+    font-size:80px;
+}
+
+.line{
+    margin-right:100px;
+}
+
+.description{
+    width:100%;
+    margin-left:0;
+    font-size:18px;
+}
+
+.experienceRow{
+    padding:22px 20px;
+    gap:20px;
+}
+
+.topRow{
+    gap:20px;
+}
+
+.experienceText h3{
+    font-size:24px;
+}
+
+.experienceText h4{
+    font-size:17px;
+}
+
+.duration{
+    font-size:14px;
+}
+
+.arrow{
+    width:34px;
+    height:34px;
+}
+
+.experiencePage{
+    padding:50px;
+}
+
+.experiencePage h2{
+    font-size:46px;
+}
+
+.experiencePage h3{
+    font-size:22px;
+}
+
+.pageDuration{
+    font-size:17px;
+}
+
+.points{
+    margin-top:30px;
+}
+
+.points li{
+    font-size:18px;
+    line-height:1.7;
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+.experience{
+    padding:100px 32px 60px;
+}
+
+.heading{
+    font-size:52px;
+}
+
+.zero,
+.five{
+    font-size:18px;
+}
+
+.line{
+    display:none;
+}
+
+.description{
+    margin-top:24px;
+    margin-bottom:35px;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.experienceRow{
+    padding:22px 0;
+    align-items:flex-start;
+}
+
+.topRow{
+    flex-direction:column;
+    gap:8px;
+}
+
+.duration{
+    margin-top:0;
+}
+
+.experienceText h3{
+    font-size:21px;
+}
+
+.experienceText h4{
+    font-size:16px;
+}
+
+.arrow{
+    width:30px;
+    height:30px;
+}
+
+.experiencePage{
+    padding:40px 28px;
+}
+
+.experiencePage h2{
+    font-size:34px;
+}
+
+.experiencePage h3{
+    font-size:20px;
+}
+
+.pageDuration{
+    font-size:16px;
+}
+
+.points{
+    gap:18px;
+}
+
+.points li{
+    font-size:16px;
+    line-height:1.7;
+    padding-left:24px;
+}
+
+.points li::before{
+    font-size:22px;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+.experience{
+    padding:90px 22px 50px;
+}
+
+.heading{
+    font-size:42px;
+}
+
+.zero,
+.five{
+    font-size:16px;
+}
+
+.description{
+    font-size:15px;
+}
+
+.experienceRow{
+    padding:18px 0;
+    gap:12px;
+}
+
+.topRow{
+    gap:6px;
+}
+
+.experienceText h3{
+    font-size:18px;
+}
+
+.experienceText h4{
+    font-size:14px;
+}
+
+.duration{
+    font-size:12px;
+}
+
+.arrow{
+    width:26px;
+    height:26px;
+}
+
+.experiencePage{
+    padding:32px 20px;
+}
+
+.experiencePage h2{
+    font-size:28px;
+}
+
+.experiencePage h3{
+    font-size:18px;
+}
+
+.pageDuration{
+    font-size:14px;
+}
+
+.points li{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.points li::before{
+    font-size:20px;
+}
+
+}

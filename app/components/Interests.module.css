@@ -1,0 +1,365 @@
+.interests {
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #FFFDF1;
+
+    padding: 140px 73px 80px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Heading ---------- */
+.headingRow{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+.line{
+    flex:1;
+    height:5px;
+    background:#FFD700;
+    margin-left:18px;
+    margin-right:400px;
+}
+
+.number {
+
+    display: flex;
+    align-items: baseline;
+
+    margin-right: 18px;
+}
+
+.zero {
+
+    font-family: var(--font-manrope);
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #22223B;
+}
+
+.two {
+
+    font-family: var(--font-manrope);
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #FFD700;
+}
+
+.heading {
+
+    margin: 0;
+
+    font-family: var(--font-manrope);
+    font-weight: 800;
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    color: #22223B;
+}
+
+
+/* ---------- Grid ---------- */
+
+.grid {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 36px;
+    row-gap: 36px;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+
+    background: #FFFDF1;
+
+    border: 2px solid #b3b3b3;
+
+    padding: 22px;
+
+    min-height: 255px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.25s ease;
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeader {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHeader h3 {
+
+    margin: 0;
+
+    font-family: var(--font-manrope);
+
+    font-size: 24px;
+    font-weight: 800;
+
+    color: #22223B;
+}
+
+.icon {
+
+    width: 34px;
+    height: 34px;
+
+    stroke: #22223B;
+    stroke-width: 2;
+
+    flex-shrink: 0;
+}
+
+.yellowLine {
+
+    width: 100%;
+    height: 2px;
+
+    background: #FFD700;
+
+    margin: 12px 0 24px;
+}
+
+.description {
+
+    margin: 0;
+
+    font-family: var(--font-manrope);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    color: #b3b3b3;
+}
+
+.skills {
+
+    margin-top: auto;
+
+    font-family: var(--font-manrope);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    color: #5a5a5a;
+}
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+/* ---------- 1440 ---------- */
+
+@media (max-width:1440px){
+
+.line{
+
+    margin-right:220px;
+
+}
+
+}
+
+/* ---------- 1200 ---------- */
+
+@media (max-width:1200px){
+
+.interests{
+
+    padding:120px 55px 70px;
+
+}
+
+.heading{
+
+    font-size:80px;
+
+}
+
+.line{
+
+    margin-right:100px;
+
+    top:-28px;
+
+}
+
+.card{
+
+    min-height:230px;
+
+}
+
+.cardHeader h3{
+
+    font-size:22px;
+
+}
+
+.description,
+.skills{
+
+    font-size:17px;
+
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+.interests{
+
+    padding:100px 32px 60px;
+
+}
+
+.heading{
+
+    font-size:52px;
+
+}
+
+.zero,
+.two{
+
+    font-size:18px;
+
+}
+
+.line{
+
+   display:none;
+
+}
+
+.grid{
+
+    grid-template-columns:1fr;
+
+    gap:28px;
+
+}
+
+.card{
+
+    min-height:auto;
+
+}
+
+.cardHeader h3{
+
+    font-size:22px;
+
+}
+
+.description{
+
+    font-size:16px;
+
+}
+
+.skills{
+
+    margin-top:22px;
+
+    font-size:16px;
+
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+.heading{
+
+    font-size:42px;
+
+}
+
+.zero,
+.two{
+
+    font-size:16px;
+
+}
+
+.line{
+
+    display:none;
+
+}
+
+.card{
+
+    padding:18px;
+
+}
+
+.cardHeader{
+
+    align-items:flex-start;
+
+    gap:12px;
+
+}
+
+.cardHeader h3{
+
+    font-size:20px;
+
+}
+
+.icon{
+
+    width:28px;
+
+    height:28px;
+
+}
+
+.description{
+
+    font-size:15px;
+
+}
+
+.skills{
+
+    font-size:15px;
+
+}
+
+}

@@ -1,0 +1,70 @@
+.splash{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:#FFD700;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+    transition:opacity .5s ease,
+               visibility .5s ease;
+
+}
+
+.fadeOut{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+.logo{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-size:96px;
+
+    font-weight:800;
+
+    letter-spacing:1%;
+
+    color:#FFFDF1;
+
+    animation:appear .7s ease;
+
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}

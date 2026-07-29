@@ -1,0 +1,258 @@
+.publications{
+
+    width:100%;
+    min-height:100vh;
+
+    background:#FFFDF1;
+
+    padding:140px 73px 80px;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ==========================================================
+                        HEADING
+========================================================== */
+
+.headingRow{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+.line{
+    flex:1;
+    height:5px;
+    background:#FFD700;
+    margin-left:18px;
+    margin-right:400px;
+}
+
+.number{
+
+    display:flex;
+
+    align-items:baseline;
+
+    margin-right:18px;
+
+    flex-shrink:0;
+
+}
+
+.zero{
+
+    font-family:var(--font-manrope);
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#22223B;
+
+}
+
+.four{
+
+    font-family:var(--font-manrope);
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#FFD700;
+
+}
+
+.heading{
+
+    margin:0;
+
+    font-family:var(--font-manrope);
+
+    font-weight:800;
+
+    font-size:100px;
+
+    line-height:1;
+
+    letter-spacing:1%;
+
+    color:#22223B;
+
+}
+
+
+/* ==========================================================
+                        TEXT
+========================================================== */
+
+.text{
+
+    margin-top:30px;
+
+    margin-left:54px;
+
+    width:min(1000px, calc(100% - 54px));
+
+    font-family:var(--font-manrope);
+
+    font-size:22px;
+
+    font-weight:600;
+
+    line-height:1.9;
+
+    letter-spacing:1%;
+
+    color:#B3B3B3;
+
+}
+
+.text p{
+
+    margin-bottom:32px;
+
+}
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+/* ---------- 1440 ---------- */
+
+@media (max-width:1440px){
+
+.line{
+
+    margin-right:220px;
+
+}
+
+.text{
+
+    font-size:20px;
+
+}
+
+}
+
+/* ---------- 1200 ---------- */
+
+@media (max-width:1200px){
+
+.publications{
+
+    padding:120px 55px 70px;
+
+}
+
+.heading{
+
+    font-size:80px;
+
+}
+
+.line{
+
+    margin-right:100px;
+
+    top:-28px;
+
+}
+
+.text{
+
+    margin-left:0;
+
+    width:100%;
+
+    font-size:18px;
+
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+.publications{
+
+    padding:100px 32px 60px;
+
+}
+
+.headingRow{
+
+    align-items:flex-start;
+
+}
+
+.heading{
+
+    font-size:52px;
+
+}
+
+.number{
+
+    margin-right:12px;
+
+}
+
+.zero,
+.four{
+
+    font-size:18px;
+
+}
+
+.line{
+
+   display:none;
+
+}
+
+.text{
+
+    margin-top:24px;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+.heading{
+
+    font-size:42px;
+
+}
+
+.zero,
+.four{
+
+    font-size:16px;
+
+}
+
+    .line{
+        display:none;
+    }
+
+.text{
+
+    font-size:15px;
+
+}
+
+}

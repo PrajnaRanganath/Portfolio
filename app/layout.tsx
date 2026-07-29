@@ -53,6 +53,10 @@ export const metadata: Metadata = {
 
   creator: "Prajna Ranganath",
 
+  verification: {
+  google: "pfkdWiWbufwqh4-bF_JAw3ahq22qQXVF3uSRiEzbaUU",
+},
+
   openGraph: {
     type: "website",
     url: "https://prajnaranganath.vercel.app",

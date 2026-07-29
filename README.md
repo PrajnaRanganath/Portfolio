@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prajna Ranganath — Portfolio
 
-## Getting Started
+Personal portfolio website showcasing my work, projects, and interests in robotics, autonomous systems, embedded systems, control, and cyber-physical systems.
 
-First, run the development server:
+## About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I am an Electronics and Communication Engineering student specializing in Cyber-Physical Systems, with interests spanning robotics, autonomous navigation, perception, embedded control, and intelligent systems.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This portfolio presents selected academic, research, and engineering projects, along with interactive demonstrations and technical visualizations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Featured Areas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Autonomous Robot Navigation and Path Planning
+- LiDAR-Based Environmental Mapping and Perception
+- Embedded Control and Motor Systems
+- Computer Vision and Edge AI
+- Metaheuristic Optimization
+- Embedded Networking and Communication
 
-## Learn More
+## Technology
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- TypeScript
+- CSS Modules
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Portfolio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit the live portfolio:
 
-## Deploy on Vercel
+https://prajnaranganath.vercel.app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Development
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Clone the repository:
+
+    git clone https://github.com/PrajnaRanganath/Portfolio.git
+    cd portfolio
+
+Install dependencies:
+
+    npm install
+
+Run the development server:
+
+    npm run dev
+
+The website will be available at:
+
+    http://localhost:3000
+
+## Deployment
+
+The portfolio is deployed using Vercel and connected to the GitHub repository for continuous deployment.
+
+---
+
+© Prajna Ranganath

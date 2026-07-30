@@ -48,7 +48,7 @@ export default function Contact() {
           <a
             href="/CV.pdf"
             className={styles.cv}
-            download
+            download 
           >
             [Download CV]
           </a>

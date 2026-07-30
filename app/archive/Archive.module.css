@@ -3,9 +3,12 @@
     width:100%;
     min-height:100vh;
 
-    background:#FFD700;
+    background:#FFFDF1;
 
-    padding:140px 72px 80px;
+    padding:140px 73px 80px;
+
+    display:flex;
+    flex-direction:column;
 
 }
 
@@ -19,19 +22,27 @@
 /* Heading */
 
 .headingRow{
-
     display:flex;
     align-items:center;
+    width:100%;
+}
 
+.line{
+    flex:1;
+    height:5px;
+    background:#FFD700;
+    margin-left:18px;
+    margin-right:400px;
 }
 
 .number{
 
+    font-family:var(--font-manrope);
     display:flex;
     margin-right:20px;
 
     font-size:22px;
-    font-weight:700;
+    font-weight:600;
 
     color:#22223B;
 
@@ -39,40 +50,36 @@
 
 .white{
 
-    color:#FFFDF1;
+    font-family:var(--font-manrope);
+    font-size:22px;
+    font-weight:600;
+    color:#FFD700;
 
 }
 
 .headingRow h1{
 
+    font-family:var(--font-manrope);
     margin:0;
 
-    font-size:96px;
+    font-size:60px;
     font-weight:800;
 
     color:#22223B;
 
 }
 
-.line{
-
-    flex:1;
-
-    height:5px;
-
-    background:#FFFDF1;
-
-    margin-left:20px;
-
-}
 
 .description{
 
+    font-family:var(--font-manrope);
+
+    font-size:22px;
+
+    font-weight:600;
     max-width:850px;
 
     margin:42px 0 70px;
-
-    font-size:20px;
 
     line-height:1.6;
 
@@ -92,12 +99,13 @@
 .header{
 
     display:grid;
+    font-family:var(--font-manrope);
 
     grid-template-columns:2fr 1fr 180px;
 
     padding:18px 24px;
 
-    border-bottom:3px solid #FFFDF1;
+    border-bottom:3px solid #FFd700;
 
     font-weight:800;
 
@@ -115,15 +123,17 @@
 
     padding:26px 24px;
 
-    border-bottom:2px solid rgba(255,253,241,.55);
+    border-bottom:2px solid #FFD700;
 
 }
 
 .projectInfo h3{
 
     margin:0;
+    font-family:var(--font-manrope);
 
     font-size:22px;
+    font-weight: 600;
 
     color:#22223B;
 
@@ -141,8 +151,9 @@
 
 .tech{
 
+    font-family:var(--font-manrope);
     color:#22223B;
-
+    font-size: 18;
     font-weight:600;
 
     line-height:1.7;
@@ -167,7 +178,7 @@
 
 .github:hover{
 
-    color:#FFFDF1;
+    color:#FFd700;
 
 }
 
@@ -183,7 +194,7 @@
 
 .headingRow h1{
 
-    font-size:58px;
+    font-size:36px;
 
 }
 
@@ -225,7 +236,7 @@
 
 .headingRow h1{
 
-    font-size:42px;
+    font-size:36px;
 
 }
 

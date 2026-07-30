@@ -1,7 +1,6 @@
 "use client";
 
 import Navbar from "@/app/components/Navbar";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import styles from "./Archive.module.css";
 
@@ -11,49 +10,57 @@ const projects = [
     tech: "ROS2 • Gazebo • C++ • Python",
     description:
       "Graph-based autonomous navigation using occupancy grid mapping and heuristic path planning.",
-    github: "#",
+    github:
+      "https://github.com/PrajnaRanganath/Autonomous_Robot_Navigation",
   },
   {
     title: "Dynamic PID Controller for DC Motor Speed Regulation",
     tech: "ESP32 • STM32 • MATLAB • Simulink",
     description:
       "Adaptive closed-loop motor speed regulation using intelligent control techniques.",
-    github: "#",
+    github:
+      "https://github.com/PrajnaRanganath/Dynamic_PID_Controller",
   },
   {
     title: "LiDAR-Based Environmental Mapping and Perception",
     tech: "ROS2 • PCL • RViz • C++ • Python",
     description:
       "Modular 3D point-cloud perception pipeline for autonomous robotic navigation.",
-    github: "#",
+    github:
+      "https://github.com/PrajnaRanganath/Lidar_Environmental_Mapping",
   },
   {
     title: "IoT-Based Red Palm Weevil Detection System",
     tech: "Python • CNN • YOLO • Vision Transformer",
     description:
       "Thermal-image-based pest detection with embedded edge deployment.",
-    github: "#",
+    github:
+      "https://github.com/PrajnaRanganath/Thermal_Image_Processing",
   },
   {
-    title: "Agricultural Robotics Research",
-    tech: "ROS • Python • KiCad • Embedded Systems",
+    title: "Metaheuristic Optimization for Engineering Applications",
+    tech:
+      "Grey Wolf Optimizer • Black Widow Optimization • Swarm Intelligence",
     description:
-      "Software and embedded hardware developed for precision agriculture research at Cornell University.",
-    github: "#",
+      "Metaheuristic optimization techniques for obtaining optimal solutions to mathematical optimization problems.",
+    github:
+      "https://github.com/PrajnaRanganath/Optimization_Models",
   },
   {
-    title: "Portfolio Website",
-    tech: "Next.js • React • TypeScript",
+    title: "Embedded Network Monitoring and Communication System",
+    tech: "ESP32 • STM32 • MQTT • TCP/IP • Embedded Networking",
     description:
-      "Personal portfolio showcasing research, projects, and technical experience.",
-    github: "#",
+      "Embedded network monitoring and communication system developed around ESP32-based wireless nodes.",
+    github:
+      "https://github.com/PrajnaRanganath/Network_Monitoring",
   },
   {
     title: "SEGY Seismic Analyzer",
     tech: "Python • NumPy • Matplotlib",
     description:
       "Processing and visualization of seismic data from SEGY files.",
-    github: "#",
+    github:
+      "https://github.com/PrajnaRanganath/SEGY_Seismic_Analyzer",
   },
 ];
 
@@ -77,11 +84,7 @@ export default function Archive() {
             <div className={styles.line}></div>
           </div>
 
-          <p className={styles.description}>
-            A complete archive of my public robotics, embedded systems,
-            autonomous systems, computer vision, and software engineering
-            projects.
-          </p>
+          <p className={styles.description}></p>
 
           {/* Projects */}
 
@@ -103,13 +106,14 @@ export default function Archive() {
                   {project.tech}
                 </div>
 
-                <Link
+                <a
                   href={project.github}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.github}
                 >
                   GitHub <ArrowUpRight size={18} />
-                </Link>
+                </a>
               </div>
             ))}
           </div>

@@ -292,7 +292,7 @@ const toggleProject = (id: number) => {
                           </p>
 
                           <a
-                            href="https://github.com/your-username/autonomous-navigation"
+                            href="https://github.com/PrajnaRanganath/Autonomous_Robot_Navigation"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.githubButton}
@@ -455,7 +455,7 @@ const toggleProject = (id: number) => {
                           </p>
 
                           <a
-                            href="https://github.com/your-username/autonomous-navigation"
+                            href="https://github.com/PrajnaRanganath/Dynamic_PID_Controller"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.githubButton}
@@ -612,7 +612,7 @@ const toggleProject = (id: number) => {
                           </p>
 
                           <a
-                            href="https://github.com/your-username/autonomous-navigation"
+                            href="https://github.com/PrajnaRanganath/Lidar_Environmental_Mapping"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.githubButton}
@@ -768,7 +768,7 @@ const toggleProject = (id: number) => {
                           </p>
 
                           <a
-                            href="https://github.com/your-username/autonomous-navigation"
+                            href="https://github.com/PrajnaRanganath/Thermal_Image_Processing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.githubButton}
@@ -916,7 +916,7 @@ const toggleProject = (id: number) => {
                           </p>
 
                           <a
-                            href="https://github.com/your-username/autonomous-navigation"
+                            href="https://github.com/PrajnaRanganath/Optimization_Models"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.githubButton}
@@ -1064,7 +1064,7 @@ const toggleProject = (id: number) => {
                           </p>
 
                           <a
-                            href="https://github.com/your-username/autonomous-navigation"
+                            href="https://github.com/PrajnaRanganath/Network_Monitoring"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.githubButton}

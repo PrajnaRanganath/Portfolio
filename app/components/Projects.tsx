@@ -45,8 +45,7 @@ const projects = [
 ];
 
 export default function Projects() {
-  const [openProject, setOpenProject] = useState<number | null>(null);
-  const [pendingProject, setPendingProject] = useState<number | null>(null);
+  const [openProjects, setOpenProjects] = useState<number[]>([]);
 
   /*
    * ============================================================
@@ -65,74 +64,19 @@ export default function Projects() {
    * ============================================================
    */
 
-  const toggleProject = (id: number) => {
-    // Clicking the currently open project closes it.
-    if (openProject === id) {
-      setOpenProject(null);
-      setPendingProject(null);
-      return;
-    }
-
-    // Another project is already open.
-    // Close it first, but remember the project the user clicked.
-    if (openProject !== null) {
-      setPendingProject(id);
-      setOpenProject(null);
-      return;
-    }
-
-    // No project is currently open.
-    setOpenProject(id);
-  };
+const toggleProject = (id: number) => {
+  setOpenProjects((prev) =>
+    prev.includes(id)
+      ? prev.filter((projectId) => projectId !== id)
+      : [...prev, id]
+  );
+};
 
   /*
    * ============================================================
    * AFTER OLD PROJECT CLOSES
    * ============================================================
    */
-
-useEffect(() => {
-  if (pendingProject === null || openProject !== null) {
-    return;
-  }
-
-  const targetProject = pendingProject;
-
-  const timer = window.setTimeout(() => {
-    const row = document.querySelector(
-      `[data-project-id="${targetProject}"]`
-    ) as HTMLElement | null;
-
-    if (!row) {
-      setOpenProject(targetProject);
-      setPendingProject(null);
-      return;
-    }
-
-    // Calculate final target position
-    const rect = row.getBoundingClientRect();
-
-    const targetScroll =
-      window.scrollY +
-      rect.top +
-      rect.height / 2 -
-      window.innerHeight / 2;
-
-    // Instantly move to final position
-    window.scrollTo({
-      top: Math.max(0, targetScroll),
-      behavior: "auto",
-    });
-
-    // Open immediately — no second timer
-    setOpenProject(targetProject);
-    setPendingProject(null);
-  }, 300);
-
-  return () => {
-    window.clearTimeout(timer);
-  };
-}, [pendingProject, openProject]);
 
   return (
     <section id="projects" className={styles.projects}>
@@ -185,14 +129,14 @@ useEffect(() => {
                 className={styles.arrowButton}
                 onClick={() => toggleProject(project.id)}
                 aria-label={
-                  openProject === project.id
+                  openProjects.includes(project.id)
                     ? `Close ${project.title}`
                     : `Open ${project.title}`
                 }
               >
                 <ArrowRightCircle
                   className={
-                    openProject === project.id
+                    openProjects.includes(project.id)
                       ? `${styles.arrow} ${styles.arrowOpen}`
                       : styles.arrow
                   }
@@ -206,7 +150,7 @@ useEffect(() => {
 
             <div
               className={
-                openProject === project.id
+                openProjects.includes(project.id)
                   ? `${styles.expand} ${styles.expandOpen}`
                   : styles.expand
               }

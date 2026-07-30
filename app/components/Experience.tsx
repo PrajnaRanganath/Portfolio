@@ -53,11 +53,15 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const [openExperience, setOpenExperience] = useState<number | null>(null);
+  const [openExperiences, setOpenExperiences] = useState<number[]>([]);
 
-  const toggleExperience = (id: number) => {
-    setOpenExperience(openExperience === id ? null : id);
-  };
+const toggleExperience = (id: number) => {
+  setOpenExperiences((prev) =>
+    prev.includes(id)
+      ? prev.filter((experienceId) => experienceId !== id)
+      : [...prev, id]
+  );
+};
 
   return (
     <section id="experience" className={styles.experience}>
@@ -111,7 +115,7 @@ export default function Experience() {
               >
                 <ArrowRightCircle
                   className={
-                    openExperience === experience.id
+                    openExperiences.includes(experience.id)
                       ? `${styles.arrow} ${styles.arrowOpen}`
                       : styles.arrow
                   }
@@ -123,7 +127,7 @@ export default function Experience() {
 
             <div
               className={
-                openExperience === experience.id
+                openExperiences.includes(experience.id)
                   ? `${styles.expand} ${styles.expandOpen}`
                   : styles.expand
               }

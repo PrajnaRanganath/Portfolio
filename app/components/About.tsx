@@ -23,7 +23,7 @@ export default function About() {
           I am an Electronics and Communication Engineering graduate
           specializing in Cyber Physical Systems, with a strong interest in
           robotics, intelligent control systems and autonomous machines. I am
-          fascinated by how automatons perceive reality and interact with the
+          fascinated by how automations perceive reality and interact with the
           physical world through the integration of sensing, computation and
           control.
         </p>

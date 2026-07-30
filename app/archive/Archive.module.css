@@ -1,0 +1,262 @@
+.archive{
+
+    width:100%;
+    min-height:100vh;
+
+    background:#FFD700;
+
+    padding:140px 72px 80px;
+
+}
+
+.container{
+
+    max-width:1400px;
+    margin:auto;
+
+}
+
+/* Heading */
+
+.headingRow{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.number{
+
+    display:flex;
+    margin-right:20px;
+
+    font-size:22px;
+    font-weight:700;
+
+    color:#22223B;
+
+}
+
+.white{
+
+    color:#FFFDF1;
+
+}
+
+.headingRow h1{
+
+    margin:0;
+
+    font-size:96px;
+    font-weight:800;
+
+    color:#22223B;
+
+}
+
+.line{
+
+    flex:1;
+
+    height:5px;
+
+    background:#FFFDF1;
+
+    margin-left:20px;
+
+}
+
+.description{
+
+    max-width:850px;
+
+    margin:42px 0 70px;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+    color:#22223B;
+
+}
+
+/* table */
+
+.table{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.header{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 180px;
+
+    padding:18px 24px;
+
+    border-bottom:3px solid #FFFDF1;
+
+    font-weight:800;
+
+    color:#22223B;
+
+}
+
+.card{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 180px;
+
+    gap:30px;
+
+    padding:26px 24px;
+
+    border-bottom:2px solid rgba(255,253,241,.55);
+
+}
+
+.projectInfo h3{
+
+    margin:0;
+
+    font-size:22px;
+
+    color:#22223B;
+
+}
+
+.projectInfo p{
+
+    margin-top:10px;
+
+    color:#7B6700;
+
+    line-height:1.7;
+
+}
+
+.tech{
+
+    color:#22223B;
+
+    font-weight:600;
+
+    line-height:1.7;
+
+}
+
+.github{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    width:max-content;
+
+    color:#22223B;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+.github:hover{
+
+    color:#FFFDF1;
+
+}
+
+/* Tablet */
+
+@media(max-width:900px){
+
+.archive{
+
+    padding:120px 32px;
+
+}
+
+.headingRow h1{
+
+    font-size:58px;
+
+}
+
+.header{
+
+    display:none;
+
+}
+
+.card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:30px 0;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.archive{
+
+    padding:100px 20px;
+
+}
+
+.headingRow{
+
+    flex-wrap:wrap;
+
+}
+
+.headingRow h1{
+
+    font-size:42px;
+
+}
+
+.line{
+
+    display:none;
+
+}
+
+.description{
+
+    font-size:16px;
+
+}
+
+.projectInfo h3{
+
+    font-size:18px;
+
+}
+
+.projectInfo p{
+
+    font-size:14px;
+
+}
+
+.tech{
+
+    font-size:14px;
+
+}
+
+}

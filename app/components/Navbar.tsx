@@ -2,12 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
 
   const [sticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+const navLink = (section: string) =>
+  pathname === "/" ? `#${section}` : `/#${section}`;
 
   useEffect(() => {
 
@@ -29,27 +34,29 @@ export default function Navbar() {
 
       <nav className={`${styles.navbar} ${sticky ? styles.sticky : ""}`}>
 
-        {/* Logo */}
-
-        <Link href="#hero" className={styles.logoBox} onClick={closeMenu}>
-          <span className={styles.logoText}>pr</span>
-        </Link>
+<Link
+  href={pathname === "/" ? "#hero" : "/#hero"}
+  className={styles.logoBox}
+  onClick={closeMenu}
+>
+  <span className={styles.logoText}>pr</span>
+</Link>
 
         {/* Desktop Navigation */}
 
         <div className={styles.navLinks}>
 
-          <Link href="#about">About</Link>
+<Link href={navLink("about")}>About</Link>
 
-          <Link href="#interests">Interests</Link>
+<Link href={navLink("interests")}>Interests</Link>
 
-          <Link href="#projects">Projects</Link>
+<Link href={navLink("projects")}>Projects</Link>
 
-          <Link href="#publications">Publications</Link>
+<Link href={navLink("publications")}>Publications</Link>
 
-          <Link href="#experience">Experience</Link>
+<Link href={navLink("experience")}>Experience</Link>
 
-          <Link href="#contact">Contact</Link>
+<Link href={navLink("contact")}>Contact</Link>
 
         </div>
 
@@ -75,17 +82,17 @@ export default function Navbar() {
         className={`${styles.mobileMenu} ${menuOpen ? styles.showMenu : ""}`}
       >
 
-        <Link href="#about" onClick={closeMenu}>About</Link>
+<Link href={navLink("about")} onClick={closeMenu}>About</Link>
 
-        <Link href="#interests" onClick={closeMenu}>Interests</Link>
+<Link href={navLink("interests")} onClick={closeMenu}>Interests</Link>
 
-        <Link href="#projects" onClick={closeMenu}>Projects</Link>
+<Link href={navLink("projects")} onClick={closeMenu}>Projects</Link>
 
-        <Link href="#publications" onClick={closeMenu}>Publications</Link>
+<Link href={navLink("publications")} onClick={closeMenu}>Publications</Link>
 
-        <Link href="#experience" onClick={closeMenu}>Experience</Link>
+<Link href={navLink("experience")} onClick={closeMenu}>Experience</Link>
 
-        <Link href="#contact" onClick={closeMenu}>Contact</Link>
+<Link href={navLink("contact")} onClick={closeMenu}>Contact</Link>
 
       </div>
 

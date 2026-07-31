@@ -204,6 +204,13 @@
 
 }
 
+.number,
+.white{
+
+    font-size:18px;
+
+}
+
 .card{
 
     display:flex;
@@ -225,6 +232,12 @@
 .archive{
 
     padding:100px 20px;
+
+}
+.number,
+.white{
+
+    font-size:16px;
 
 }
 

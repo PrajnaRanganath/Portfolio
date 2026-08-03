@@ -23,7 +23,7 @@ export default function Contact() {
 
         <div className={styles.photo}>
           <img
-            src="/images/profile.jpeg"
+            src="/images/profile.jpg"
             alt="Profile"
           />
         </div>

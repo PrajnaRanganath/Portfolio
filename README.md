@@ -4,7 +4,7 @@ Personal portfolio website showcasing my work, projects, and interests in roboti
 
 ## About
 
-I am an Electronics and Communication Engineering student specializing in Cyber-Physical Systems, with interests spanning robotics, autonomous navigation, perception, embedded control, and intelligent systems.
+I am an Electronics and Communication Engineering student specializing in Cyber Physical Systems, with interests spanning robotics, autonomous navigation, perception, embedded control, and intelligent systems.
 
 This portfolio presents selected academic, research, and engineering projects, along with interactive demonstrations and technical visualizations.
 
